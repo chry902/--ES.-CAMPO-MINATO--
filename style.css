@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-image: url(./assets/sfondo-onepice.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 80px;
+    display: flex;
+    justify-content: center;
+
+    .game_container {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background-color: rgba(167, 167, 167, 0.379);
+
+        .game_menu {
+            width: 100%;
+            height: 25%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: last baseline;
+            background-color: rgba(255, 255, 255, 0.065);
+            padding: 0 1rem;
+
+            .score {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+            }
+        }
+
+        /* ----------------
+
+        ------------------- */
+        .grid_continer {
+            position: relative;
+            background-color: rgba(181, 182, 181, 0.256);
+            width: 100%;
+            height: 80%;
+            padding: 1rem;
+
+            .cell_wrapper {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: repeat(10, 1fr);
+                grid-column-gap: 2px;
+                grid-row-gap: 2px;
+                z-index: 55;
+
+
+                .game_cell {
+                    width: 100%;
+                    height: 100%;
+                    border: 1.5px solid rgba(194, 194, 194, 0.628);
+                    border-radius: 5px;
+                }
+
+
+
+
+                .cell_low {
+                    background-color: rgba(183, 248, 255, 0.762);
+                }
+
+                .cell_dark {
+                    background-color: rgba(255, 255, 255, 0.721);
+                }
+
+                .cell_bomb {
+                    background-image: url(./assets/bomb.png);
+                    background-repeat: no-repeat;
+                    /* Evita la ripetizione dell'immagine */
+                    background-size: cover;
+                    /* Adatta l'immagine per coprire l'intero elemento */
+                    background-position: center center;
+                }
+
+                .game_cell:hover,
+                .cell_clicked {
+                    background-image: url(./assets/cell.png);
+                    background-repeat: no-repeat;
+                    /* Evita la ripetizione dell'immagine */
+                    background-size: cover;
+                    /* Adatta l'immagine per coprire l'intero elemento */
+                    background-position: center center;
+                }
+
+
+            }
+
+
+            .win_game {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(56, 213, 25, 0.536);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                z-index: 1;
+
+            }
+
+
+            .lose_game {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(255, 0, 0, 0.446);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+
+            }
+
+            .hidden {
+                display: none;
+            }
+
+            .text_game {
+                font-size: 80px;
+                color: white;
+            }
+
+        }
+
+        /* ----------------
+
+        ------------------- */
+        .game_footer {
+            width: 100%;
+            height: 15%;
+            background-color: rgba(233, 150, 122, 0.481);
+
+
+            .wrapper_footer_buttoms {
+                width: 100%;
+                height: 100%;
+                padding: 0 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+
+}

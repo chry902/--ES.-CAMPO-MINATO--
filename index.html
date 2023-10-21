@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Campo Minato</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="game_container">
+
+            <header class="game_menu">
+                <h1>
+                    Campo minato
+                </h1>
+                <div class="score">
+                    <h3 class="score">Score</h3>
+                    <h2 class="point_score">00000</h2>
+                </div>
+            </header>
+
+            <main class="grid_continer">
+                <div class="cell_wrapper "></div>
+
+                <div class="win_game hidden">
+                    <h4 class="text_game ">Hai vinto il gioco!</h4>
+                    <button>REFRESH</button>
+                </div>
+                
+                <div class="lose_game hidden">
+                    <h4 class="text_game ">GAME OVER!</h4>
+                    <button>REFRESH</button>
+                </div>
+
+
+            </main>
+
+            <footer class="game_footer">
+                <div class="wrapper_footer_buttoms">
+                    <button class="restart">
+                        <span>restart</span>
+                    </button>
+                    <button class="show">
+                        <span>show</span>
+                    </button>
+                </div>
+            </footer>
+            
+        </div>
+       <script type="text/javascript" src="./main.js"></script>
+    </body>
+</html>
