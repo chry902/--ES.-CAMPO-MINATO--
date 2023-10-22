@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d_block {
+    display: none;
+}
+
+body {
+    background-image: url(./assets/sfondo-onepice.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100%;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.game_container {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: rgba(167, 167, 167, 0.379);
+}
+
+.game_menu {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: last baseline;
+    background-color: rgba(255, 255, 255, 0.065);
+    padding: 0 1rem;
+}
+
+.score {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid_continer {
+    position: relative;
+    background-color: rgba(181, 182, 181, 0.256);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.cell_wrapper {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+}
+
+.game_cell {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.img_contain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.img_card {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+}
+
+.win_game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(56, 213, 25, 0.536);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.lose_game {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.446);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+}
+
+.text_game {
+    font-size: 80px;
+    color: white;
+}
+
+.game_footer {
+    width: 100%;
+    height: 40px;
+    background-color: rgba(233, 150, 122, 0.481);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.wrapper_footer_buttoms {
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
