@@ -20,7 +20,8 @@
             </header>
 
             <main class="grid_continer">
-                <div class="cell_wrapper "></div>
+                <div class="cell_wrapper ">
+                </div>
 
                 <div class="win_game hidden">
                     <h4 class="text_game ">Hai vinto il gioco!</h4>
@@ -29,7 +30,7 @@
                 
                 <div class="lose_game hidden">
                     <h4 class="text_game ">GAME OVER!</h4>
-                    <button>REFRESH</button>
+                    <button onclick="reloadPage()" class="btn_endGame">REFRESH</button>
                 </div>
 
 
@@ -37,10 +38,10 @@
 
             <footer class="game_footer">
                 <div class="wrapper_footer_buttoms">
-                    <button class="restart">
+                    <button onclick="reloadPage()" class="restart">
                         <span>restart</span>
                     </button>
-                    <button class="show">
+                    <button onclick="endGame()" class="show">
                         <span>show</span>
                     </button>
                 </div>

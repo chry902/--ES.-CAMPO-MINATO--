@@ -4,15 +4,18 @@
     box-sizing: border-box;
 }
 
-
+.d_block {
+    display: none;
+}
 
 body {
     background-image: url(./assets/sfondo-onepice.jpeg);
+
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 100vh;
-    padding: 50px 80px;
+    height: 100%;
+    padding: 30px 20px;
     display: flex;
     justify-content: center;
 
@@ -47,8 +50,9 @@ body {
             position: relative;
             background-color: rgba(181, 182, 181, 0.256);
             width: 100%;
-            height: 80%;
-            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
 
             .cell_wrapper {
                 width: 100%;
@@ -56,49 +60,33 @@ body {
                 display: grid;
                 grid-template-columns: repeat(10, 1fr);
                 grid-template-rows: repeat(10, 1fr);
-                grid-column-gap: 2px;
-                grid-row-gap: 2px;
-                z-index: 55;
+                grid-column-gap: 4px;
+                grid-row-gap: 4px;
+
 
 
                 .game_cell {
                     width: 100%;
                     height: 100%;
-                    border: 1.5px solid rgba(194, 194, 194, 0.628);
+
                     border-radius: 5px;
+
+                    .img_contain {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+
+                        .img_card {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: fill;
+
+                            border-radius: 8px;
+                        }
+
+                    }
                 }
-
-
-
-
-                .cell_low {
-                    background-color: rgba(183, 248, 255, 0.762);
-                }
-
-                .cell_dark {
-                    background-color: rgba(255, 255, 255, 0.721);
-                }
-
-                .cell_bomb {
-                    background-image: url(./assets/bomb.png);
-                    background-repeat: no-repeat;
-                    /* Evita la ripetizione dell'immagine */
-                    background-size: cover;
-                    /* Adatta l'immagine per coprire l'intero elemento */
-                    background-position: center center;
-                }
-
-                .game_cell:hover,
-                .cell_clicked {
-                    background-image: url(./assets/cell.png);
-                    background-repeat: no-repeat;
-                    /* Evita la ripetizione dell'immagine */
-                    background-size: cover;
-                    /* Adatta l'immagine per coprire l'intero elemento */
-                    background-position: center center;
-                }
-
-
             }
 
 
@@ -150,8 +138,10 @@ body {
         ------------------- */
         .game_footer {
             width: 100%;
-            height: 15%;
+            height: 40px;
             background-color: rgba(233, 150, 122, 0.481);
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
 
 
             .wrapper_footer_buttoms {
