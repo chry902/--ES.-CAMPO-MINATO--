@@ -42,6 +42,7 @@ function endGame(index) {
 function updateScore() {
   score++;
   pointScore.innerText = String(score).padStart(5, 0);
+  console.log(score);
 }
 
 ////////////////////////////////////////////////
@@ -71,13 +72,13 @@ for (let index = 1; index <= totalCell; index++) {
   const cell = document.createElement("div"); //creo tagg
   cell.classList.add("game_cell"); //aggiungo .classe
   cell.innerHTML = htmlMarkUp;
-  const image = dQS(".img_card");
+
   cellColor(index, cell); //call funzione per colorazione celle diverse
 
   cell.addEventListener("click", function () {
     // funzione per logica click
     const imgCard = cell.querySelector(".img_card");
-    if (cell.classList.contains("cell_clicked")) return;
+    if (cell.classList.contains("isClicked")) return;
 
     if (bombList.includes(index)) {
       imgCard.src = "./assets/bomb.png";
@@ -85,6 +86,9 @@ for (let index = 1; index <= totalCell; index++) {
       endGame(index);
     } else {
       imgCard.src = "./assets/cell.png"; //cambio immagine se clicco casella giusta
+      cell.classList.add("isClicked");
+      updateScore();
+      console.log(cell);
     }
     if (score === maxiScore) {
       winGame.classList.remove("hidden");
